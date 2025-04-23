@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "course.cjavafee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.cjavafee'"
+  },
+  {
+    "name": "course.dbmsfee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.dbmsfee'"
+  },
+  {
+    "name": "course.testingfee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.testingfee'"
+  },
+  {
+    "name": "course.awsfee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.awsfee'"
+  },
+  {
+    "name": "course.reactfee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.reactfee'"
+  },
+  {
+    "name": "course.sbmsfee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.sbmsfee'"
+  },
+  {
+    "name": "course.ajavafee",
+    "type": "java.lang.String",
+    "description": "A description for 'course.ajavafee'"
+  }
+]}

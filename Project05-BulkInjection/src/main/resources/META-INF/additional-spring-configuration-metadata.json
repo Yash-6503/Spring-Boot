@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "per.info.name",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.name'"
+  },
+  {
+    "name": "per.info.addr",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.addr'"
+  },
+  {
+    "name": "per.info.email",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.email'"
+  },
+  {
+    "name": "per.info.mobile",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.mobile'"
+  },
+  {
+    "name": "per.info.favcolor",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.favcolor'"
+  },
+  {
+    "name": "per.info.favcity",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.favcity'"
+  },
+  {
+    "name": "per.info.hobby",
+    "type": "java.lang.String",
+    "description": "A description for 'per.info.hobby'"
+  }
+]}

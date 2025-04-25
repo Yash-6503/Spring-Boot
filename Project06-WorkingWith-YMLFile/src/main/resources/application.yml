@@ -1,0 +1,21 @@
+#spring.application.name=Project06-WorkingWith-YMLFile
+    
+#Employee Info with properties file
+#emp.info.name=Yash Walke
+#emp.info.desig=Software Developer
+#emp.info.addr=Hyderabad
+#emp.info.company=Google
+#emp.info.email=yash@gmail.com
+#emp.info.phone=1234567890
+#emp.info.salary=500000
+
+# Employee information with yml file
+emp:
+  info:
+    name: Yash Walke
+    desig: Software Developer
+    addr: Hyderabad
+    company: Google
+    email: yash200@gmail.com
+    phone: 9988776655
+    salary: 250000

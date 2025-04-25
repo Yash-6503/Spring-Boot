@@ -1,0 +1,47 @@
+{"properties": [
+  {
+    "name": "emp",
+    "type": "java.lang.String",
+    "description": "A description for 'emp'"
+  },
+  {
+    "name": "info",
+    "type": "java.lang.String",
+    "description": "A description for 'info'"
+  },
+  {
+    "name": "desig",
+    "type": "java.lang.String",
+    "description": "A description for 'desig'"
+  },
+  {
+    "name": "name",
+    "type": "java.lang.String",
+    "description": "A description for 'name'"
+  },
+  {
+    "name": "addr",
+    "type": "java.lang.String",
+    "description": "A description for 'addr'"
+  },
+  {
+    "name": "company",
+    "type": "java.lang.String",
+    "description": "A description for 'company'"
+  },
+  {
+    "name": "email",
+    "type": "java.lang.String",
+    "description": "A description for 'email'"
+  },
+  {
+    "name": "phone",
+    "type": "java.lang.String",
+    "description": "A description for 'phone'"
+  },
+  {
+    "name": "salary",
+    "type": "java.lang.String",
+    "description": "A description for 'salary'"
+  }
+]}

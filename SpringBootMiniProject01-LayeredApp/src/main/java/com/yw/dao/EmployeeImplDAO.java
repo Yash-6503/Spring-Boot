@@ -48,7 +48,6 @@ public class EmployeeImplDAO implements IEmployeeDAO {
 					emp.setJob(rs.getString(3));
 					emp.setSalary(rs.getDouble(4));
 					emp.setDeptno(rs.getInt(5));
-					wwwwwwwwwww
 					list.add(emp);
 				}
 			}catch(SQLException e) {

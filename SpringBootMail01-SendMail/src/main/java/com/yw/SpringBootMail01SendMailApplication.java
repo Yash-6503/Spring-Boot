@@ -31,3 +31,8 @@ public class SpringBootMail01SendMailApplication {
 	}
 
 }
+
+
+/* Output
+Mail sent successfully...
+*/

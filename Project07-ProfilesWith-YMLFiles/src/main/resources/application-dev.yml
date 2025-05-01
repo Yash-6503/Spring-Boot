@@ -1,0 +1,11 @@
+#spring.application.name=Project07-ProfilesWith-YMLFiles
+
+#prod 
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/naresh
+    username: root
+    password: ""
+    type: org.apache.commons.dbcp2.BasicDataSource

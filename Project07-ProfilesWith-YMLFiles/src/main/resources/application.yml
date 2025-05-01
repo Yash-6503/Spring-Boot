@@ -1,0 +1,7 @@
+#spring.application.name=Project07-ProfilesWith-YMLFiles
+
+
+spring:
+  profiles:
+    active:
+    - dev

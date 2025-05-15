@@ -13,6 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.yw.entities.Employee;
+import com.yw.menu.MenuOperations;
 import com.yw.service.IEmployeeServiceImpl;
 
 @SpringBootApplication
@@ -25,24 +26,45 @@ public class BootDataJpaProj04UpdateAndReadOprMySqldbApplication {
 		
 		try(Scanner sc = new Scanner(System.in))
 			{
-			Employee emp = new Employee();
-			System.out.println("Enter new employee name : ");
-			emp.setEmpName(sc.nextLine());
-			System.out.println("Enter new employee desig : ");
-			emp.setEmpDesig(sc.nextLine());
-			System.out.println("Enter new employee salary: ");
-			emp.setEmpSalary(sc.nextDouble());
-			System.out.println("Enter Employee Id to update : ");
-			emp.setEmpId(sc.nextInt());
-			String msg = service.updateEmployee(emp);
-			System.out.println(msg);
+				int choice;
+				Employee emp = new Employee();
+				do {
+					System.out.println("\nEmployee Table Operations..");
+					System.out.println("1. Update Employee");
+					System.out.println("2. Update Employee Salary");
+					System.out.println("3. Show All Employees");
+					System.out.println("4. Exit");
+					System.out.println("Enter your choice: ");
+					choice = sc.nextInt();
+					switch(choice) {
+						case 1:
+							String msg = MenuOperations.UpdateEmployeeOpr(service);
+							System.out.println(msg);
+							break;
+							
+						case 2:
+							String message = MenuOperations.UpdateEmployeeSalary(service);
+							System.out.println(message);
+							break;
+							
+						case 3:
+							MenuOperations.ShowAllEmployees(service);
+							break;
+							
+						case 4:
+							System.out.println("Exiting......");
+							System.exit(0);
+							
+						default:
+								System.out.println("Invalid Choice...");
+					}
+				}while(choice != 4);
 			
-			System.out.println("\nAfter Updating Employee...");
-			Iterator<Employee> itr = service.showEmployees();
-			while(itr.hasNext()) {
-				System.out.println(itr.next());
-			}
-			System.out.println();
+			
+			
+//			System.out.println(msg);
+			
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

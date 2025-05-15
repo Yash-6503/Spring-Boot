@@ -8,4 +8,5 @@ public interface IEmployeeService
 {
 	public String updateEmployee(Employee emp);
 	public Iterator<Employee> showEmployees();
+	public String updateEmployeeSalary(int id, Double salary);
 }

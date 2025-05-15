@@ -32,4 +32,17 @@ public class IEmployeeServiceImpl implements IEmployeeService
 		return itr;
 	}
 
+	@Override
+	public String updateEmployeeSalary(int id, Double salary) {
+		Optional<Employee> opt = empRepo.findById(id);
+		if(opt.isPresent()) {
+			Employee emp = opt.get();
+			emp.setEmpSalary(salary);
+			empRepo.save(emp);
+			return "Employee with Id "+id+" is updated with new Salary...";
+		}else {
+			return "Employee not Found....";
+		}
+	}
+
 }

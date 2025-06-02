@@ -11,4 +11,7 @@ public interface EmployeeRepository extends JpaRepository<Employee_Date_Time, In
 {
 	@Query(nativeQuery=true, value="SELECT YEAR(CURRENT_TIMESTAMP) - YEAR(DOB) FROM EMPLOYEE_DATE_TIME WHERE DESIG=?1")
 	public List<Integer> getEmployeeAgesByDesig(String desig);
+	
+	@Query(nativeQuery=true, value="SELECT ID, NAME, DESIG, YEAR(CURRENT_TIMESTAMP) - YEAR(DOB) AS AGE FROM EMPLOYEE_DATE_TIME WHERE ID=?1")
+	public List<String> getEmployeeAgeById(Integer id);
 }

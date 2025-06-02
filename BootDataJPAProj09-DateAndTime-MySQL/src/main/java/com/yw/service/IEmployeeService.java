@@ -8,4 +8,5 @@ public interface IEmployeeService {
 	public String saveEmployee(Employee_Date_Time empDateTime);
 	public List<Employee_Date_Time> showAllEmployees();
 	public List<Integer> showAgesByDesig(String desig);
+	public List<String> showEmpAgeById(Integer id);
 }

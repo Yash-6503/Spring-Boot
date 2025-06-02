@@ -31,9 +31,9 @@ public class EmpDateTimeRunner implements CommandLineRunner
 		
 		
 		//1. saving emp
-		Employee_Date_Time empDateTime = new Employee_Date_Time("rajesh","manager",LocalDateTime.of(2001,12, 6, 22, 51),
-																								LocalTime.of(12, 28),
-																								LocalDate.of(2025, 03, 05));
+		Employee_Date_Time empDateTime = new Employee_Date_Time("yash","developer",LocalDateTime.of(2003,5, 6, 19, 20),
+																								LocalTime.of(10, 38),
+																								LocalDate.of(2025, 07, 01));
 		String msg1 = empService.saveEmployee(empDateTime);
 		System.out.println("\n"+msg1);
 		
@@ -42,10 +42,16 @@ public class EmpDateTimeRunner implements CommandLineRunner
 		System.out.println("\nShowing all employees...");
 		list1.forEach(System.out::println);
 		
-		//3. find emp based on desig.
+		//3. find emp age based on desig.
 		List<Integer> list2 = empService.showAgesByDesig("clerk");
 		System.out.println("\nShowing employee ages which desig = clerk");
 		list2.forEach(System.out::println);
+		
+		//4. find emp age based on id
+		List<String> list3 = empService.showEmpAgeById(1);
+		System.out.println("\nShowing employee age whose id is 1");
+		list3.forEach(System.out::println);
+		
 	}
 
 }

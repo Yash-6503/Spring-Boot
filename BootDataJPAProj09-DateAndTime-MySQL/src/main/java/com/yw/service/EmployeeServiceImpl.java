@@ -29,5 +29,10 @@ public class EmployeeServiceImpl implements IEmployeeService {
 		return empRepo.getEmployeeAgesByDesig(desig);
 	}
 
+	@Override
+	public List<String> showEmpAgeById(Integer id) {
+		return empRepo.getEmployeeAgeById(id);
+	}
+
 	
 }

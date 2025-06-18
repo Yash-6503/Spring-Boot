@@ -30,6 +30,16 @@ public class EmployeeServiceImpl implements IEmployeeService {
 			emp.setNetSalary(emp.getSalary() - (emp.getSalary() * 0.2));
 		});
 		
+		list.forEach(emp ->{
+			System.out.println(emp);
+		});
+		
+		list.forEach(System.out::println);
+		
+		for(Employee e : list) {
+			System.out.println(e);
+		}
+		
 		return list;
 	}
 

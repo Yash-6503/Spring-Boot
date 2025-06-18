@@ -20,10 +20,7 @@ public class Runner implements CommandLineRunner{
 	@Autowired
 	private EmployeeRepository empRepo;
 
-    Runner(BootDataJpaProj06FinderMethodsMySqldbApplication bootDataJpaProj06FinderMethodsMySqldbApplication) {
-        this.bootDataJpaProj06FinderMethodsMySqldbApplication = bootDataJpaProj06FinderMethodsMySqldbApplication;
-    }
-	
+  
 	@Override
 	public void run(String... args) throws Exception {
 		try(

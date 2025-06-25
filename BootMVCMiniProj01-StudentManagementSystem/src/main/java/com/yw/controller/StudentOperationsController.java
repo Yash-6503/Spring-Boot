@@ -33,14 +33,7 @@ public class StudentOperationsController {
 		map.put("students", studService.getAllStudents());
 		return "DisplayStudents";
 	}
-	
-	@GetMapping("/process")
-	public String process(Map<String, Object> map) {
-		map.put("attr1", "val1");
-		map.put("sysDate", LocalDateTime.now());
-		return "show_data";
-	}
-	
+		
 	@GetMapping("/view/{roll}")
 	public String viewStudent(@PathVariable Integer roll, Model model) {
 		Student_Info stud = studService.getStudentById(roll);
@@ -57,7 +50,7 @@ public class StudentOperationsController {
 	public String addStudent(@ModelAttribute Student_Info stud, Model model) {
 		String msg = studService.saveStudent(stud);
 		model.addAttribute("message",msg);	
-		return "DisplayStudents";
+		return "redirect:allStudents";
 	}
 	
 	@GetMapping("/delete/{roll}")
@@ -67,5 +60,22 @@ public class StudentOperationsController {
 		return "Delete";
 	}
 	
+	@GetMapping("/update/{roll}")
+	public String updateStudentForm(@PathVariable Integer roll, Model model) {
+		model.addAttribute("student", studService.getStudentById(roll));
+		return "UpdateStudent";
+	}
+	
+	@PostMapping("/modify")
+	public String updateStudent(@ModelAttribute Student_Info stud, Model model) {
+		String msg = studService.updateStudent(stud);
+		model.addAttribute("message", msg);
+		return "redirect:allStudents";
+	}
+	
+	@GetMapping("/help")
+	public String getHelp() {
+		return "HelpContact";
+	}
 	
 }

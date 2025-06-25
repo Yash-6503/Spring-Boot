@@ -9,4 +9,5 @@ public interface StudentService {
 	public Student_Info getStudentById(Integer roll);
 	public String saveStudent(Student_Info stud);
 	public String removeStudent(Integer roll);
+	public String updateStudent(Student_Info stud);
 }

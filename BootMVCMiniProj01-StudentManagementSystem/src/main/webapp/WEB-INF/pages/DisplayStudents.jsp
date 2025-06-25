@@ -6,11 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <title>All Students</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f6f8;
-            margin: 0;
+            margin: 0px;
             padding: 20px;
         }
 
@@ -54,71 +55,10 @@
             text-align: center;
         }
 
-        .action-btn {
-            padding: 5px 12px;
-            margin: 0 2px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-            font-size: 0.9em;
-        }
-
-        .view-btn { background-color: #2196F3; }
-        .update-btn { background-color: #FFC107; }
-        .delete-btn { background-color: #F44336; }
-
-        .no-data {
-            text-align: center;
-            color: #777;
-        }
-        
-        /* Style for Home and Add Student buttons */
-		a[href="/sms/"], a[href="/sms/add"] {
-		    display: inline-block;
-		    text-decoration: none;
-		    padding: 10px 20px;
-		    margin: 30px 10px 0 10px;
-		    font-weight: bold;
-		    border-radius: 8px;
-		    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		    transition: background-color 0.3s ease;
-		    color: white;
-		}
-
-		/* Home button */
-		a[href="/sms/"] {
-		    background-color: #4CAF50;
-		}
-		
-		a[href="/sms/"]:hover {
-		    background-color: #45a049;
-		}
-		
-		/* Add Student button */
-		a[href="/sms/add"] {
-		    background-color: #2196F3;
-		}
-		
-		a[href="/sms/add"]:hover {
-		    background-color: #1976D2;
-		}
-		
-		.links{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			
-		}
-	        
-        
     </style>
 </head>
 <body>
-
     <h1>All Students</h1>
-
-    <!--  <p style="text-align:center; color: #888;">ModelAttributes :: ${students}</p>-->
 
     <c:choose>
         <c:when test="${!empty students}">

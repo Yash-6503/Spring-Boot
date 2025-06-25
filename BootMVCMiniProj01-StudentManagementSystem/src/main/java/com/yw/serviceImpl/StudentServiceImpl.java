@@ -51,4 +51,13 @@ public class StudentServiceImpl implements StudentService{
 		return "Student not deleted....";
 	}
 
+	@Override
+	public String updateStudent(Student_Info stud) {
+		if(stud != null) {
+			studRepo.save(gf.evaluateMarks(stud));
+			return "Student " + stud.getName() + " updated Successfully...";
+		}
+		return "Student not updated...";
+	}
+
 }

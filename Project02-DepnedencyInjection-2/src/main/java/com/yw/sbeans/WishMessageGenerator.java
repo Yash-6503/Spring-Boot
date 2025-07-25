@@ -17,9 +17,10 @@ public class WishMessageGenerator
 			return "Good Morning";
 		}else if(time.getHour() > 12 && time.getHour() < 16) {
 			return "Good Afternoon";
-		}else if(time.getHour() > 16 && time.getHour() < 20) {
+		}else if(time.getHour() >= 16 && time.getHour() <= 20) {
 			return "Good Evening";
 		}else {
+			System.out.println(time);
 			return "Good Night";
 		}
 	}
